@@ -97,6 +97,11 @@ main .team-member:nth-child(2n) {
   }
 }
 @media screen and (min-width: 768px) {
+  .team-member {
+    width: 210px;
+  }
+}
+@media screen and (min-width: 992px) {
   body {
     margin: 0 8.75rem;
   }
