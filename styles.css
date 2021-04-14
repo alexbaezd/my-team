@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:wght@400&family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --font-family: "Poppins", sans-serif;
+  --font-serif: "PT Serif", serif;
+  --font-size-body: 1.125;
+  --font-size-h1: 2rem;
+  --font-size-h3: 1.125;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 15em auto 4em;
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+  margin: 0 1.2rem;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: var(--font-size-h1);
+  font-family: var(--font-serif);
+}
+
+header {
+  display: grid;
+  grid-template-rows: 4.5rem auto;
+  margin-top: 4rem;
+}
+header :is(h3, p) {
+  font-family: var(--font-family);
+  font-size: var(--font-size-body);
+}
+
+header h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+header p {
+  line-height: 1.688rem;
+}
+
+footer {
+  text-align: center;
+  align-self: end;
+}
+footer,
+:is(a) {
+  color: #a9a9a9;
+  font-size: 0.875rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+  column-gap: 10px;
+}
+
+.team-member {
+  width: 129px;
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+main .team-member:nth-child(2n) {
+  align-self: end;
+  margin-top: 8rem;
+}
+.team-member img {
+  width: 100%;
+}
+.name {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.job-position {
+  font-family: var(--font-serif);
+  font-size: 0.625rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  transform: rotate(90deg);
+  align-self: start;
+  justify-self: center;
+  margin-top: 70px;
+  margin-left: 10px;
+  width: 150px;
+}
+
+@media screen and (min-width: 414px) {
+  .team-member {
+    width: 150px;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0 8.75rem;
+  }
+  header {
+    grid-template-columns: 50% 50%;
+    align-items: baseline;
+    margin-top: 3rem;
+  }
+  header article {
+    width: 400px;
+  }
+  header h1 {
+    margin-left: 2.5rem;
+  }
+  main {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .team-member {
+    width: 280px;
+  }
+  main .team-member:nth-child(2n) {
+    background: none;
+    align-self: auto;
+    margin-top: 0rem;
+  }
+  main .team-member:nth-child(3n - 1) {
+    align-self: end;
+    margin-top: 9rem;
+  }
+  .name {
+    font-size: 1.125rem;
+  }
+  .job-position {
+    font-size: 0.75rem;
+  }
+}
